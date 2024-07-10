@@ -17,13 +17,18 @@ fun main(args: Array<String>) {
 }
 
 @RestController
-class MessageController {
+class MessageController(val service: MessageService) {
     @GetMapping("/")
-    fun index() = listOf(
-        Message("1", "Hello!"),
-        Message("2", "Bonjour!"),
-        Message("3", "Privet!"),
-    )
+    fun index(): List<Message> = service.findMessages()
+
+    @GetMapping("/{id}")
+    fun index(@PathVariable id: String): List<Message> =
+        service.findMessageById(id)
+
+    @PostMapping("/")
+    fun post(@RequestBody message: Message) {
+        service.save(message)
+    }
 }
 
 data class Message(val id: String?, val text: String)
