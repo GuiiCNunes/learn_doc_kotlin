@@ -6,3 +6,4 @@
 
 [ X ] [Add a data class to Spring Boot project](https://kotlinlang.org/docs/jvm-spring-boot-add-data-class.html)
 
+[ X ] [Add database support for Spring Boot project](https://kotlinlang.org/docs/jvm-spring-boot-add-db-support.html)
