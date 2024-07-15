@@ -9,3 +9,16 @@
 [ X ] [Add database support for Spring Boot project](https://kotlinlang.org/docs/jvm-spring-boot-add-db-support.html)
 
 [ X ] [Use Spring Data CrudRepository for database access](https://kotlinlang.org/docs/jvm-spring-boot-using-crudrepository.html)
+
+# Comandos Docker
+
+## Docker
+```bash
+docker build -t kotlin-app .
+docker run -p 8080:8080 kotlin-app
+```
+
+## Docker-compose
+```bash
+docker-compose up --build
+```
